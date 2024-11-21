@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Launch SageMaker Word Count Job",
+        "type": "python",
+        "request": "launch",
+        "program": "${file}", // Path to the SageMaker script
+        "console": "integratedTerminal",
+        "args": [
+          "--role", "arn:aws:iam::682033478299:role/service-role/AmazonSageMaker-ExecutionRole-20241120T185650", // Replace with your SageMaker role ARN
+          "--input_s3_path", "s3://tdg-gartner-testjob/inputs/", // Replace with your input S3 path
+          "--output_s3_path", "s3://tdg-gartner-testjob/outputs", // Replace with your output S3 path
+          "--bucket", "tdg-gartner-testjob", // Replace with your bucket name
+          "--zip_name", "sage_maker_example" // Name of the zip file (without extension)
+        ]
+      }
+    ]
+  }
+  

@@ -1,6 +1,6 @@
 # main_script.py
 from pyspark.sql import SparkSession
-from data.text_module import LARGE_TEXT  # Import the large text from the subdirectory
+from scripts.text_module import LARGE_TEXT  # Import the large text from the subdirectory
 
 # Create Spark session
 spark = SparkSession.builder.appName("TextProcessingJob").getOrCreate()
